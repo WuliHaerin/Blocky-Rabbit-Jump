@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\BlockyRabbitJumping\Script\PlayerController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\BackgroundParallax.cs" />
+    <Compile Include="Assets\Ad\CountDown.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformSnake.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformEmpty.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SpawnObjectManger.cs" />
@@ -73,9 +74,12 @@
     <Compile Include="Assets\BlockyRabbitJumping\Script\Auto_Rotate.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\DebugCode\TestChangeColor.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SoundController.cs" />
+    <Compile Include="Assets\Ad\AdManager.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformTurtle.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SelfDeactive.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\Platform.cs" />
+    <Compile Include="Assets\Ad\CebianlanManager.cs" />
+    <Compile Include="Assets\Ad\Ad.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\GradientColorChangeObject.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\AIController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\UIManager.cs" />
@@ -85,10 +89,6 @@
     <Compile Include="Assets\BlockyRabbitJumping\Script\DebugCode\DebugPoolObjManager.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\TutorialController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformHippopotamus.cs" />
-    <Compile Include="Assets\Ad\CebianlanManager.cs" />
-    <Compile Include="Assets\Ad\CountDown.cs" />
-    <Compile Include="Assets\Ad\AdManager.cs" />
-    <Compile Include="Assets\Ad\Ad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -386,12 +386,12 @@
       <HintPath>D:\Unity Hub\Editor\2021.3.41f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="ttsdk">
       <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -896,6 +896,10 @@
       <Project>{18A026EF-E3CA-4B40-114F-405C26B11697}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="TTLitJson.Player.csproj">
+      <Project>{6B2D795D-2532-7963-93A7-C3E2109E1E5A}</Project>
+      <Name>TTLitJson.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
       <Project>{8E8FDA10-ABF8-CCA7-EB05-B163FFCD4A40}</Project>
       <Name>UnityEngine.UI.Player</Name>
@@ -907,10 +911,6 @@
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
       <Project>{B6BDCDE8-475D-E993-67CE-1806C72C1F65}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="TTLitJson.Player.csproj">
-      <Project>{6B2D795D-2532-7963-93A7-C3E2109E1E5A}</Project>
-      <Name>TTLitJson.Player</Name>
     </ProjectReference>
     <ProjectReference Include="TTWebGL.Player.csproj">
       <Project>{1D086452-37EA-64F2-6EA1-851065288166}</Project>

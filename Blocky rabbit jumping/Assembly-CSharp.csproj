@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\BlockyRabbitJumping\Script\PlayerController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\BackgroundParallax.cs" />
+    <Compile Include="Assets\Ad\CountDown.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformSnake.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformEmpty.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SpawnObjectManger.cs" />
@@ -73,9 +74,12 @@
     <Compile Include="Assets\BlockyRabbitJumping\Script\Auto_Rotate.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\DebugCode\TestChangeColor.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SoundController.cs" />
+    <Compile Include="Assets\Ad\AdManager.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformTurtle.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\SelfDeactive.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\Platform.cs" />
+    <Compile Include="Assets\Ad\CebianlanManager.cs" />
+    <Compile Include="Assets\Ad\Ad.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\GradientColorChangeObject.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\AIController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\UIManager.cs" />
@@ -85,10 +89,6 @@
     <Compile Include="Assets\BlockyRabbitJumping\Script\DebugCode\DebugPoolObjManager.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\TutorialController.cs" />
     <Compile Include="Assets\BlockyRabbitJumping\Script\Platform\PlatformHippopotamus.cs" />
-    <Compile Include="Assets\Ad\CebianlanManager.cs" />
-    <Compile Include="Assets\Ad\CountDown.cs" />
-    <Compile Include="Assets\Ad\AdManager.cs" />
-    <Compile Include="Assets\Ad\Ad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -446,16 +446,16 @@
       <HintPath>D:\Unity Hub\Editor\2021.3.41f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ttsdk">
+      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.5\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="ttsdk">
-      <HintPath>Assets\Plugins\ByteGame\com.bytedance.starksdk\ttsdk.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -972,6 +972,10 @@
       <Project>{F41FED2D-EE86-D0D2-A23E-10A0471B6918}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="com.bytedance.ttsdk-editor.csproj">
+      <Project>{0C3E3A0A-15C0-C897-FE37-EB74F78E0AEB}</Project>
+      <Name>com.bytedance.ttsdk-editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{B8645C45-EA23-8821-19FC-B28D546347F8}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
@@ -1036,6 +1040,10 @@
       <Project>{1028203E-4CD6-8572-B4BC-82198947FAE8}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="TTLitJson.csproj">
+      <Project>{9A72F0B6-5088-4F18-6882-C3555ADA3B4C}</Project>
+      <Name>TTLitJson</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
       <Project>{926087BC-F4A3-CD99-53DB-CD16F2DBA616}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
@@ -1056,17 +1064,9 @@
       <Project>{51EB065A-8816-F1A2-5148-B493B1D502E0}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="TTLitJson.csproj">
-      <Project>{9A72F0B6-5088-4F18-6882-C3555ADA3B4C}</Project>
-      <Name>TTLitJson</Name>
-    </ProjectReference>
     <ProjectReference Include="TTWebGL.csproj">
       <Project>{C03475BE-EEDF-6C75-DCD4-FCF9ED7A3196}</Project>
       <Name>TTWebGL</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.bytedance.ttsdk-editor.csproj">
-      <Project>{0C3E3A0A-15C0-C897-FE37-EB74F78E0AEB}</Project>
-      <Name>com.bytedance.ttsdk-editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
